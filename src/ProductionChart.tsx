@@ -1,6 +1,6 @@
 import { ProductionData } from "./utils/types";
-import { CustomAreaChart } from "./components/CustomAreaChart";
 import { processData } from "./utils/dataHandler";
+import { CustomProductionChart } from "./components/CustomProductionChart";
 
 interface SuperchartsProps {
   // Define your props here
@@ -9,23 +9,23 @@ interface SuperchartsProps {
   cumulative: boolean;
 }
 
-const Supercharts = ({ data, cumulative }: SuperchartsProps) => {
+const ProductionChart = ({ data, cumulative }: SuperchartsProps) => {
   // Implement your component logic here
   const processedData = processData(data);
 
   if (cumulative) {
     return (
       <div>
-        <CustomAreaChart data={processedData} cumulative={cumulative} />
+        <CustomProductionChart data={processedData} cumulative={cumulative} />
       </div>
     );
   } else {
     return (
       <div>
-        <CustomAreaChart data={processedData} cumulative={cumulative} />
+        <CustomProductionChart data={processedData} cumulative={cumulative} />
       </div>
     );
   }
 };
 
-export default Supercharts;
+export default ProductionChart;
