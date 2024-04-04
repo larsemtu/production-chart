@@ -11,10 +11,6 @@ import {
 } from "recharts";
 import { ProcessedProductionData } from "../utils/types";
 import { useState } from "react";
-import type {
-  Payload,
-  Props,
-} from "recharts/types/component/DefaultLegendContent";
 import { Button } from "./ui/button";
 import useDebouncedRange from "@/hooks/useDebouncedRange";
 
@@ -56,34 +52,6 @@ export const CustomProductionChart = ({
       ...prevState,
       [dataKey]: !prevState[dataKey as keyof typeof prevState],
     }));
-  };
-
-  const renderLegend = (props: Props) => {
-    // Don't directly mutate props or payload
-
-    return (
-      <ul>
-        {props.payload?.map((entry: Payload, index: number) => (
-          <li
-            key={`item-${index}`}
-            onClick={() => toggleSeriesVisibility(entry.dataKey as string)}
-            style={{
-              textDecoration: visibleSeries[
-                entry.dataKey as keyof typeof visibleSeries
-              ]
-                ? "none"
-                : "line-through",
-              color: visibleSeries[entry.dataKey as keyof typeof visibleSeries]
-                ? entry.color
-                : "#fff",
-              cursor: "pointer",
-            }}
-          >
-            {entry.value}
-          </li>
-        ))}
-      </ul>
-    );
   };
 
   return (
