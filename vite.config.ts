@@ -13,8 +13,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.tsx",
-      name: "Supercharts",
-      fileName: (format) => `super-charts.${format}.js`,
+      name: "ProductionChart",
+      fileName: (format) => `production-chart.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],

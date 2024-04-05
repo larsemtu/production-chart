@@ -1,8 +1,15 @@
 {
   "name": "production-chart",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "main": "dist/production-chart.umd.js",
+  "module": "dist/production-chart.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/production-chart.es.js",
+      "require": "./dist/production-chart.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-
-import data from "./assets/prod-data.json";
-import { ProductionChart } from ".";
+import "@/index.css";
+import data from "./prod-data.json";
+import { ProductionChart } from "../src";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
