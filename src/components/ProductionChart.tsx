@@ -2,7 +2,6 @@ import { ProductionData } from "@/utils/types";
 import "../global.css";
 import { processData } from "@/utils/dataHandler";
 import { CustomProductionChart } from "./CustomProductionChart";
-import { Button } from "./ui/Button";
 
 interface ProductionChartProps {
   // Define your props here
@@ -18,6 +17,7 @@ const ProductionChart = ({ data, cumulative }: ProductionChartProps) => {
   if (cumulative) {
     return (
       <div>
+        <p>Version 1.0.10!!</p>
         <CustomProductionChart data={processedData} cumulative={cumulative} />
       </div>
     );

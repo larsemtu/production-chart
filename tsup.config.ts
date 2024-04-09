@@ -9,6 +9,8 @@ export default defineConfig({
   // Clean the `dist` directory before building.
   // This is useful to ensure the output is only the latest.
   clean: true,
+  format: ["cjs", "esm"],
+  outDir: "dist",
   // Sourcemaps for easier debugging.
   sourcemap: true,
 });

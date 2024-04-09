@@ -1,8 +1,10 @@
 {
-  "name": "production-chart",
-  "version": "1.0.8",
+  "name": "@larsemtu/production-chart",
+  "version": "1.0.10",
   "description": "",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
   "scripts": {
     "build": "tsup"
   },
