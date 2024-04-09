@@ -100,6 +100,7 @@ export const CustomProductionChart = ({
             width={80}
             tickFormatter={(value) =>
               new Intl.NumberFormat("en", {
+                notation: "compact",
                 minimumSignificantDigits: 3,
               }).format(value)
             }
